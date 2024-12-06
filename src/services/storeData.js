@@ -9,7 +9,7 @@ async function storeData(id, data) {
             credentials: serviceAccount
         });
  
-  const predictCollection = db.collection('prediction');
+  const predictCollection = db.collection('predictions');
   return predictCollection.doc(id).set(data);
 }
  

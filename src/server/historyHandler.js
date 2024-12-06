@@ -10,7 +10,7 @@ const serviceAccount = require('../../serviceAccount.json');
 
 async function getPredictionHistoryHandler(request, h) {
   try {
-    const predictionsSnapshot = await db.collection('prediction').get();
+    const predictionsSnapshot = await db.collection('predictions').get();
     
     const predictions = predictionsSnapshot.docs.map(doc => {
       const data = doc.data();
